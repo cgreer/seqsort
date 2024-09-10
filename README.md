@@ -19,7 +19,7 @@ SeqHalving is great because it performs well across many scenarios[1]. Also, it'
   <img src="https://github.com/user-attachments/assets/40f769cd-d5b8-4437-bd4b-5e322e55e13a" alt="Results" width="500">
 </p>
 
-It turns out that Sequential Halving can be improved with a simple change: Rerank *all* the arms between rounds without doing any elimination[4]. The sampling round size is still halved at the end of each round, but all arms are eligible to participate in subsequent rounds.
+It turns out that Sequential Halving can be improved with a simple change: Rerank *all* the arms between rounds without doing any elimination. The sampling round size is still halved at the end of each round, but all arms are eligible to participate in subsequent rounds.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8ae403f4-f8ee-4420-a1c2-386e62ca6fb2" alt="Results" width="600">
