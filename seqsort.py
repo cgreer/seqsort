@@ -127,7 +127,7 @@ SETUP_NAMES = [
     "Geometric",
     "One real competitor",
 ]
-SETUP_R_MULT = [8, 5, 1, 1, 1, 1] # multiplier for replicates
+SETUP_R_MULT = [4, 4, 1, 1, 1, 1] # multiplier for replicates
 SETUP_PS = [setup_1_ps, setup_2_ps, setup_3_ps, setup_4_ps, setup_5_ps, setup_6_ps]
 SETUP_BUDGETS = [ # S x (Arms, Budget)]
     [(20, 7600),   (40, 15600),  (80, 31600)], # noqa Setup 1
@@ -330,4 +330,4 @@ def figure(figure_data):
 
 if __name__ == "__main__":
     np.random.seed(42)
-    run_experiment(n_replicates=20_000) # Prob overkill but death to error bars
+    run_experiment(n_replicates=50_000) # Prob overkill but death to error bars
