@@ -156,8 +156,6 @@ def run_experiment(n_replicates: int, n_resims: int = 1000):
     :n_replicates - number of replicates
     :n_resims - num of times you resim for bootstrapping confidence
     '''
-    errors = [[], []] # abs(selected arm.mean - best arm.mean)
-    incorrects = [[], []] # 1 if didnt' select best arm else 0
     figure_data = [] # [ ["SeqHalving", 1, [0.246, 0.26517, 0.29022]], ... ]
     for setup, setup_name in enu(SETUP_NAMES):
         print(f"\nSetup {setup + 1}")
@@ -174,6 +172,8 @@ def run_experiment(n_replicates: int, n_resims: int = 1000):
             assert best_arm == 0
 
             print(setup_name, sub_setup, n_cands, budget, ps[:5], ps[-5:])
+            errors = [[], []] # abs(selected arm.mean - best arm.mean)
+            incorrects = [[], []] # 1 if didnt' select best arm else 0
             for _ in range(n_replicates * SETUP_R_MULT[setup]):
 
                 #####################
@@ -287,7 +287,7 @@ def figure(figure_data):
 
     # Ticks / Grid
     ax.grid(axis='y', which='major', linestyle='-', linewidth=0.4, color='gray', alpha=0.3)
-    ax.set_ylim(0.20, 0.40)
+    ax.set_ylim(0.00, 0.40)
 
     ax.set_xticks(x)
     ax.set_xticklabels(["" for x in figure_data])
