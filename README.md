@@ -1,3 +1,7 @@
+**Updates**
+- Tue Sep 10 20:14:30 PDT 2024: Reran experiment + figure after bug fix
+
+
 # SeqSort
 
 Sequential Halving is a simple yet powerful multi-armed bandit algorithm used in SOTA RL algorithms such as [Gumbel MuZero](https://arxiv.org/pdf/2403.00564) and [EfficientZero V2](https://arxiv.org/pdf/2403.00564).
@@ -5,7 +9,7 @@ Sequential Halving is a simple yet powerful multi-armed bandit algorithm used in
 And it turns out SH can be slightly improved with a simple 1-line code change!
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/13b24f5f-c18d-4891-90a5-0b15306a8131" alt="Results" width="900">
+  <img src="https://github.com/user-attachments/assets/3061463a-6dd6-4767-bfe9-665269517937" alt="Results" width="900">
 </p>
 
 Sequential Halving works by allocating a fixed budget of samples across a sequence of sampling rounds. In round one, every arm is sampled. After each round, the worst half of the arms are eliminated. This process continues until you have only one arm (the best arm estimate)[1].
