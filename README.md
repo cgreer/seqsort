@@ -9,7 +9,7 @@ Sequential Halving is a simple yet powerful multi-armed bandit algorithm used in
 And it turns out SH can be slightly improved with a simple 1-line code change!
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3061463a-6dd6-4767-bfe9-665269517937" alt="Results" width="900">
+  <img src="https://github.com/user-attachments/assets/3a060240-e9dd-47d6-970f-92678e2344e1" alt="Results" width="900">
 </p>
 
 Sequential Halving works by allocating a fixed budget of samples across a sequence of sampling rounds. In round one, every arm is sampled. After each round, the worst half of the arms are eliminated. This process continues until you have only one arm (the best arm estimate)[1].
